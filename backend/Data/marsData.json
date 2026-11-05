@@ -1,0 +1,77 @@
+{
+  "mount_sharp": {
+    "site_name": "Mount Sharp (Gale Crater)",
+    "center": [-4.65, 137.40],
+    "base_habitat": {
+      "name": "Bradbury Base",
+      "coords": [-4.5895, 137.4417],
+      "elevation_m": -4450
+    },
+    "unstudied_poi": {
+      "name": "Upper Sulfate-to-Clay Transition Mounds",
+      "coords": [-4.7200, 137.4800],
+      "elevation_m": -3800,
+      "scientific_objective": "Sample untouched sulfate layers for climate transition analysis"
+    },
+    "hazards": [
+      {
+        "name": "Gediz Vallis Scarp",
+        "type": "STEEP_SLOPE",
+        "danger_level": "CRITICAL",
+        "slope_deg": 28,
+        "coords": [-4.6700, 137.4500],
+        "radius_meters": 450
+      }
+    ],
+    "telemetry": {
+      "surface_temp_c": -65,
+      "radiation_rate_msv_day": 0.24,
+      "atmospheric_pressure_pa": 750,
+      "safe_eva_window_hours": 5.5
+    },
+    "safe_route": [
+      [-4.5895, 137.4417],
+      [-4.6200, 137.4350],
+      [-4.6550, 137.4450],
+      [-4.6900, 137.4650],
+      [-4.7200, 137.4800]
+    ]
+  },
+  "jezero_crater": {
+    "site_name": "Jezero Crater (Neretva Vallis)",
+    "center": [18.38, 77.58],
+    "base_habitat": {
+      "name": "Octavia E. Butler Base",
+      "coords": [18.4447, 77.4508],
+      "elevation_m": -2530
+    },
+    "unstudied_poi": {
+      "name": "Upstream Neretva Vallis Canyon",
+      "coords": [18.5200, 77.3500],
+      "elevation_m": -2300,
+      "scientific_objective": "Inspect deep canyon bedrock for ancient hydrothermal minerals"
+    },
+    "hazards": [
+      {
+        "name": "Canyon Sand Trap & Choke Point",
+        "type": "BOULDER_AND_SLOPE",
+        "danger_level": "WARNING",
+        "slope_deg": 22,
+        "coords": [18.4800, 77.4000],
+        "radius_meters": 600
+      }
+    ],
+    "telemetry": {
+      "surface_temp_c": -58,
+      "radiation_rate_msv_day": 0.21,
+      "atmospheric_pressure_pa": 820,
+      "safe_eva_window_hours": 6.0
+    },
+    "safe_route": [
+      [18.4447, 77.4508],
+      [18.4650, 77.4300],
+      [18.4950, 77.3850],
+      [18.5200, 77.3500]
+    ]
+  }
+}

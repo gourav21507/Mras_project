@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #0b0d13;
+  color: #38ef7d;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hud-header {
+  background: #11141e;
+  border-bottom: 2px solid #1f2739;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.logo span { color: #f39c12; }
+
+.controls select, .controls button {
+  background: #1b2234;
+  color: #fff;
+  border: 1px solid #38ef7d;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 55px);
+  position: relative;
+}
+
+#map {
+  flex: 3;
+  height: 100%;
+  background: #05070a;
+}
+
+.telemetry-panel {
+  flex: 1;
+  max-width: 380px;
+  background: #0f131d;
+  border-left: 2px solid #1f2739;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.telemetry-panel h3 {
+  color: #f39c12;
+  font-size: 0.9rem;
+  margin: 15px 0 6px;
+  letter-spacing: 1px;
+}
+
+.telemetry-card {
+  background: #161b29;
+  padding: 10px;
+  border: 1px solid #252e45;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.telemetry-card p {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.highlight {
+  color: #38ef7d;
+  font-weight: bold;
+}
+
+.hazard-box {
+  background: #1e141a;
+  border: 1px solid #ff3860;
+  color: #ff859c;
+  padding: 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+/* MOLA Scale Legend */
+.mola-legend {
+  background: rgba(17, 20, 30, 0.9) !important;
+  border: 1px solid #1f2739;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #fff;
+}
+
+.mola-legend h4 {
+  margin: 0 0 5px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #f39c12;
+}
+
+.mola-gradient-bar {
+  width: 180px;
+  height: 12px;
+  background: linear-gradient(to right, #2b3260, #4b78a4, #57b5af, #99d58f, #e5e865, #e67949, #bf3f45, #ffffff);
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.mola-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #a0aec0;
+  margin-top: 3px;
+}
+
+/* Controlled MOLA Topography Shader */
+.mola-color-layer {
+}

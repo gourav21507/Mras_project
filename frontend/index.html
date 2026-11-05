@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AresNav - Mars Astronaut EVA Navigator</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Backup ensure: map hamesha height pakde */
+    #map {
+      height: 100% !important;
+      min-height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- HUD Header Bar -->
+  <header class="hud-header">
+    <div class="logo">ARES-NAV <span>// EVA PROTOCOL</span></div>
+    <div class="controls">
+      <label>SELECT SITE:</label>
+      <select id="siteSelect">
+        <option value="jezero_crater">Jezero Crater (Neretva Vallis)</option>
+        <option value="mount_sharp">Mount Sharp (Gale Crater)</option>
+      </select>
+      <button id="loadBtn">LOAD MISSION</button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div id="map"></div>
+
+    <!-- Telemetry Panel -->
+    <aside class="telemetry-panel">
+      <h3>MISSION TELEMETRY</h3>
+      <div class="telemetry-card">
+        <p>STATUS: <span id="missionStatus" class="highlight">STANDBY</span></p>
+        <p>TOTAL DISTANCE: <span id="distVal">--</span> km</p>
+        <p>EST. DURATION: <span id="timeVal">--</span> hrs</p>
+      </div>
+
+      <h3>SUIT LIFE SUPPORT</h3>
+      <div class="telemetry-card">
+        <p>O2 REMAINING: <span id="o2Val">--</span>%</p>
+        <p>BATTERY POWER: <span id="battVal">--</span>%</p>
+      </div>
+
+      <h3>HAZARDS IDENTIFIED</h3>
+      <div id="hazardList" class="hazard-box">
+        No active hazards loaded.
+      </div>
+    </aside>
+  </main>
+
+  <!-- Leaflet JS & App JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
